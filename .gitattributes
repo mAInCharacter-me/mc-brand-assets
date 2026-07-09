@@ -1,0 +1,10 @@
+# Normalize text to LF; treat binaries as binary so Git never munges them.
+* text=auto eol=lf
+*.png binary
+*.ico binary
+*.svg text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.html text eol=lf
+*.md text eol=lf

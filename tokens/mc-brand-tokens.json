@@ -1,0 +1,24 @@
+{
+  "brandName": "mAInCharacter",
+  "colors": {
+    "black": "#000000",
+    "charcoal": "#0B0B0A",
+    "ivory": "#F8F5EC",
+    "cream": "#EFE4C8",
+    "forest": "#173327",
+    "gold": "#C3A469",
+    "white": "#FFFFFF",
+    "terracotta": "#D46255",
+    "crimson": "#8F1D2C",
+    "rust": "#B85C38"
+  },
+  "notes": {
+    "primaryHierarchy": "Gold-on-black and transparent-gold remain primary.",
+    "fillTokenVsTextToken": "Use separate fill and text tokens; do not reuse background tokens blindly as body text tokens.",
+    "tertiarySemantics": {
+      "terracotta": "human stakes / lived experience / relationship friction",
+      "crimson": "critical risk / failed threshold / compliance warning",
+      "rust": "market pressure / timing / urgency"
+    }
+  }
+}

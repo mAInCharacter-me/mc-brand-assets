@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mAInCharacter — Brand Asset CDN</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#0B0B0A; --ivory:#F8F5EC; --cream:#EFE4C8; --forest:#173327;
+    --gold:#C3A469; --accent:#D4AE50; --muted:#4A463E; --hair:#e2d9c4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ivory);color:var(--charcoal);
+    font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.7;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header.hero{background:var(--charcoal);color:var(--ivory);padding:56px 0 44px}
+  .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,5vw,52px);
+    margin:0 0 8px;letter-spacing:.01em}
+  .hero h1 .ai{color:var(--gold)}
+  .hero p{margin:0;max-width:60ch;color:#d8d2c4}
+  .hero .lockup{height:44px;margin-bottom:22px;display:block}
+  .mono{font-family:"DM Mono",ui-monospace,monospace}
+  /* config bar */
+  .cfg{background:var(--forest);color:var(--ivory);padding:16px 0}
+  .cfg .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+  .cfg label{display:flex;flex-direction:column;font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;color:#bcc9be;gap:4px}
+  .cfg input{font-family:"DM Mono",monospace;font-size:14px;padding:7px 10px;border:0;border-radius:5px;
+    background:var(--ivory);color:var(--charcoal);min-width:150px}
+  .cfg .note{font-size:13px;color:#bcc9be;flex-basis:100%;margin:0}
+  .modepick{display:inline-flex;border:1px solid rgba(248,245,236,.3);border-radius:6px;overflow:hidden}
+  .modepick button{font-family:"DM Mono",monospace;font-size:13px;background:transparent;color:var(--ivory);
+    border:0;padding:7px 14px;cursor:pointer}
+  .modepick button.on{background:var(--gold);color:var(--charcoal)}
+  section{padding:40px 0;border-bottom:1px solid var(--hair)}
+  section h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;margin:0 0 4px}
+  section .sub{margin:0 0 24px;color:var(--muted);max-width:64ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+  .card{border:1px solid var(--hair);border-radius:10px;overflow:hidden;background:#fff;
+    display:flex;flex-direction:column}
+  .thumb{height:130px;display:flex;align-items:center;justify-content:center;padding:16px;position:relative}
+  .thumb img{max-width:100%;max-height:100%;object-fit:contain}
+  .bg-dark{background:var(--charcoal)}
+  .bg-light{background:var(--ivory)}
+  .bg-cream{background:var(--cream)}
+  .bg-forest{background:var(--forest)}
+  .bg-check{background-color:#fafafa;background-image:
+    linear-gradient(45deg,#e6e6e6 25%,transparent 25%),linear-gradient(-45deg,#e6e6e6 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#e6e6e6 75%),linear-gradient(-45deg,transparent 75%,#e6e6e6 75%);
+    background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+  .meta{padding:11px 13px;border-top:1px solid var(--hair);display:flex;flex-direction:column;gap:8px}
+  .fname{font-family:"DM Mono",monospace;font-size:12px;word-break:break-all;color:var(--charcoal)}
+  .fkind{font-family:"DM Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.05em}
+  .copy{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;cursor:pointer;
+    background:var(--charcoal);color:var(--ivory);border:0;border-radius:6px;padding:8px 10px;
+    transition:background .15s}
+  .copy:hover{background:var(--forest)}
+  .copy.done{background:var(--gold);color:var(--charcoal)}
+  .tokenrow{display:flex;flex-wrap:wrap;gap:10px}
+  .tokenrow a{font-family:"DM Mono",monospace;font-size:13px;text-decoration:none;color:var(--ivory);
+    background:var(--charcoal);padding:9px 14px;border-radius:6px}
+  .tokenrow a:hover{background:var(--forest)}
+  footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
+  footer a{color:var(--forest)}
+  .snip{background:#fbf8ef;border:1px solid var(--hair);border-radius:8px;padding:14px 16px;
+    font-family:"DM Mono",monospace;font-size:12.5px;overflow-x:auto;white-space:pre;margin:0}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="lockup" src="logo/mc-logo-gold.svg" alt="mAInCharacter">
+    <h1>m<span class="ai">AI</span>nCharacter — Brand Asset CDN</h1>
+    <p>Every web-ready logo, icon, favicon, header, and token in one place. Pick an asset, copy its live URL, paste it into your HTML. URLs below are computed from wherever this page is published.</p>
+  </div>
+</header>
+
+<div class="cfg">
+  <div class="wrap">
+    <div class="modepick" id="modepick">
+      <button data-mode="pages" class="on">GitHub Pages</button>
+      <button data-mode="jsdelivr">jsDelivr CDN</button>
+    </div>
+    <label>owner<input id="owner" placeholder="OWNER"></label>
+    <label>repo<input id="repo" value="mc-brand-assets"></label>
+    <label>ref (jsDelivr)<input id="ref" value="main"></label>
+    <p class="note" id="cfgnote"></p>
+  </div>
+</div>
+
+<main class="wrap" id="app"></main>
+
+<footer class="wrap">
+  <p>Derived from the master pack — see <a href="SOURCE_MAP.md">SOURCE_MAP.md</a> and <a href="README.md">README.md</a>. The master pack remains the single source of truth.</p>
+</footer>
+
+<script>
+const ASSETS = [
+  {title:"Primary lockups — SVG", sub:"Horizontal wordmark, vector. Scales crisply at any size. First choice for site headers and email.", items:[
+    {p:"logo/mc-logo-gold.svg", bg:"dark"}, {p:"logo/mc-logo-ivory.svg", bg:"dark"},
+    {p:"logo/mc-logo-white.svg", bg:"dark"}, {p:"logo/mc-logo-charcoal.svg", bg:"light"},
+    {p:"logo/mc-logo-black.svg", bg:"light"} ]},
+  {title:"Primary lockups — PNG @2048w", sub:"Raster fallback with 1× clearspace built in. On-background and transparent variants.", items:[
+    {p:"logo/png/mc-logo-gold-on-black-2048.png", bg:"dark"}, {p:"logo/png/mc-logo-gold-on-charcoal-2048.png", bg:"dark"},
+    {p:"logo/png/mc-logo-gold-on-forest-2048.png", bg:"forest"}, {p:"logo/png/mc-logo-charcoal-on-ivory-2048.png", bg:"light"},
+    {p:"logo/png/mc-logo-charcoal-on-cream-2048.png", bg:"cream"}, {p:"logo/png/mc-logo-ivory-on-charcoal-2048.png", bg:"dark"},
+    {p:"logo/png/mc-logo-gold-transparent-2048.png", bg:"check"}, {p:"logo/png/mc-logo-charcoal-transparent-2048.png", bg:"check"},
+    {p:"logo/png/mc-logo-ivory-transparent-2048.png", bg:"check"}, {p:"logo/png/mc-logo-black-transparent-2048.png", bg:"check"},
+    {p:"logo/png/mc-logo-white-transparent-2048.png", bg:"check"} ]},
+  {title:"Wordmark components — SVG", sub:"The mAIn and CHARACTER halves for custom typographic layouts.", items:[
+    {p:"wordmark/mc-wordmark-main-gold.svg", bg:"dark"}, {p:"wordmark/mc-wordmark-main-charcoal.svg", bg:"light"},
+    {p:"wordmark/mc-wordmark-main-ivory.svg", bg:"dark"}, {p:"wordmark/mc-wordmark-main-black.svg", bg:"light"},
+    {p:"wordmark/mc-wordmark-main-white.svg", bg:"dark"},
+    {p:"wordmark/mc-wordmark-character-gold.svg", bg:"dark"}, {p:"wordmark/mc-wordmark-character-charcoal.svg", bg:"light"},
+    {p:"wordmark/mc-wordmark-character-ivory.svg", bg:"dark"}, {p:"wordmark/mc-wordmark-character-black.svg", bg:"light"},
+    {p:"wordmark/mc-wordmark-character-white.svg", bg:"dark"} ]},
+  {title:"Icon — A-dot & stacked (SVG)", sub:"Square symbol for app icons and large-size favicons.", items:[
+    {p:"icon/mc-icon-gold.svg", bg:"dark"}, {p:"icon/mc-icon-ivory.svg", bg:"dark"}, {p:"icon/mc-icon-white.svg", bg:"dark"},
+    {p:"icon/mc-icon-charcoal.svg", bg:"light"}, {p:"icon/mc-icon-black.svg", bg:"light"},
+    {p:"icon/mc-icon-stacked-gold.svg", bg:"dark"}, {p:"icon/mc-icon-stacked-ivory.svg", bg:"dark"}, {p:"icon/mc-icon-stacked-white.svg", bg:"dark"} ]},
+  {title:"Icon — PNG", sub:"On-background @1024, transparent @2048, small 128/256/512, and circle-safe profile crops.", items:[
+    {p:"icon/png/mc-icon-gold-on-black-1024.png", bg:"dark"}, {p:"icon/png/mc-icon-gold-on-charcoal-1024.png", bg:"dark"},
+    {p:"icon/png/mc-icon-gold-on-forest-1024.png", bg:"forest"}, {p:"icon/png/mc-icon-charcoal-on-ivory-1024.png", bg:"light"},
+    {p:"icon/png/mc-icon-ivory-on-charcoal-1024.png", bg:"dark"},
+    {p:"icon/png/mc-icon-gold-transparent-2048.png", bg:"check"}, {p:"icon/png/mc-icon-charcoal-transparent-2048.png", bg:"check"},
+    {p:"icon/png/mc-icon-ivory-transparent-2048.png", bg:"check"}, {p:"icon/png/mc-icon-black-transparent-2048.png", bg:"check"},
+    {p:"icon/png/mc-icon-white-transparent-2048.png", bg:"check"},
+    {p:"icon/png/mc-icon-gold-512.png", bg:"check"}, {p:"icon/png/mc-icon-gold-256.png", bg:"check"}, {p:"icon/png/mc-icon-gold-128.png", bg:"check"},
+    {p:"icon/png/mc-icon-charcoal-512.png", bg:"check"}, {p:"icon/png/mc-icon-charcoal-256.png", bg:"check"}, {p:"icon/png/mc-icon-charcoal-128.png", bg:"check"},
+    {p:"icon/png/mc-icon-stacked-gold-on-black-1024.png", bg:"dark"}, {p:"icon/png/mc-icon-stacked-gold-transparent-2048.png", bg:"check"},
+    {p:"icon/png/mc-profile-gold-on-black-1024.png", bg:"dark"}, {p:"icon/png/mc-profile-gold-on-charcoal-1024.png", bg:"dark"},
+    {p:"icon/png/mc-profile-gold-on-forest-1024.png", bg:"forest"}, {p:"icon/png/mc-profile-charcoal-on-ivory-1024.png", bg:"light"},
+    {p:"icon/png/mc-profile-ivory-on-charcoal-1024.png", bg:"dark"} ]},
+  {title:"Favicons & social", sub:"Drop straight into <head>. OG image is the 1200×630 social card.", items:[
+    {p:"favicon/favicon-16.png", bg:"check"}, {p:"favicon/favicon-32.png", bg:"check"}, {p:"favicon/favicon-48.png", bg:"check"},
+    {p:"favicon/favicon-64.png", bg:"check"}, {p:"favicon/apple-touch-icon-180.png", bg:"check"},
+    {p:"favicon/web-app-icon-192.png", bg:"check"}, {p:"favicon/web-app-icon-512.png", bg:"check"},
+    {p:"favicon/og-image-1200x630.png", bg:"dark"} ]},
+  {title:"Responsive headers", sub:"Transparent header exports at 360 / 720 / 1200w for srcset.", items:[
+    {p:"header/mc-header-dark-1200.png", bg:"dark"}, {p:"header/mc-header-dark-720.png", bg:"dark"}, {p:"header/mc-header-dark-360.png", bg:"dark"},
+    {p:"header/mc-header-light-1200.png", bg:"light"}, {p:"header/mc-header-light-720.png", bg:"light"}, {p:"header/mc-header-light-360.png", bg:"light"},
+    {p:"header/mc-header-overlay-1200.png", bg:"forest"}, {p:"header/mc-header-overlay-720.png", bg:"forest"}, {p:"header/mc-header-overlay-360.png", bg:"forest"} ]},
+];
+const TOKENS = ["tokens/mc-brand-tokens.css","tokens/mc-brand-tokens.json","tokens/mc-contrast-checks.csv","site.webmanifest"];
+
+// ---- base URL detection ----
+const owner=document.getElementById('owner'), repo=document.getElementById('repo'), ref=document.getElementById('ref');
+const cfgnote=document.getElementById('cfgnote');
+let mode="pages";
+(function detect(){
+  const h=location.hostname, parts=location.pathname.split('/').filter(Boolean);
+  if(h.endsWith('github.io')){ owner.value=h.split('.')[0]; if(parts.length) repo.value=parts[0];
+    cfgnote.textContent="Detected from this Pages URL. Copy buttons give live, working links."; }
+  else { cfgnote.textContent="Opened locally — set owner to preview the exact GitHub URLs. (Copy still works once published.)"; }
+})();
+function baseFor(path){
+  const o=owner.value.trim()||"OWNER", r=repo.value.trim()||"mc-brand-assets", g=ref.value.trim()||"main";
+  if(mode==="jsdelivr") return `https://cdn.jsdelivr.net/gh/${o}/${r}@${g}/${path}`;
+  return `https://${o}.github.io/${r}/${path}`;
+}
+document.querySelectorAll('#modepick button').forEach(b=>b.onclick=()=>{
+  mode=b.dataset.mode;
+  document.querySelectorAll('#modepick button').forEach(x=>x.classList.toggle('on',x===b));
+  render();
+});
+[owner,repo,ref].forEach(i=>i.oninput=render);
+
+function card(it){
+  const el=document.createElement('div'); el.className='card';
+  const ext=it.p.split('.').pop().toUpperCase();
+  el.innerHTML=`
+    <div class="thumb bg-${it.bg}"><img loading="lazy" src="${it.p}" alt=""></div>
+    <div class="meta">
+      <span class="fname">${it.p.split('/').pop()}</span>
+      <span class="fkind">${ext} · ${it.p}</span>
+      <button class="copy">Copy URL</button>
+    </div>`;
+  const btn=el.querySelector('.copy');
+  btn.onclick=async()=>{ const url=baseFor(it.p);
+    try{ await navigator.clipboard.writeText(url); }catch(e){ prompt("Copy this URL:", url); }
+    btn.textContent="Copied ✓"; btn.classList.add('done');
+    setTimeout(()=>{btn.textContent="Copy URL"; btn.classList.remove('done');},1400); };
+  return el;
+}
+function render(){
+  const app=document.getElementById('app'); app.innerHTML='';
+  ASSETS.forEach(sec=>{
+    const s=document.createElement('section');
+    const h=document.createElement('h2'); h.textContent=sec.title;
+    const p=document.createElement('p'); p.className='sub'; p.textContent=sec.sub;
+    const g=document.createElement('div'); g.className='grid';
+    sec.items.forEach(it=>g.appendChild(card(it)));
+    s.append(h,p,g); app.appendChild(s);
+  });
+  // tokens section
+  const ts=document.createElement('section');
+  ts.innerHTML=`<h2>Tokens & config</h2><p class="sub">Reference these directly — link the CSS for brand variables, or read the JSON in build tooling.</p>`;
+  const row=document.createElement('div'); row.className='tokenrow';
+  TOKENS.forEach(t=>{ const a=document.createElement('a'); a.textContent=t.split('/').pop();
+    a.href="#"; a.onclick=async e=>{e.preventDefault(); const url=baseFor(t);
+      try{await navigator.clipboard.writeText(url);}catch(_){prompt("Copy this URL:",url);}
+      const o=a.textContent; a.textContent="Copied ✓"; setTimeout(()=>a.textContent=o,1400);};
+    row.appendChild(a); });
+  ts.appendChild(row);
+  const snip=document.createElement('pre'); snip.className='snip'; snip.style.marginTop='20px';
+  snip.textContent=`<link rel="stylesheet" href="${baseFor('tokens/mc-brand-tokens.css')}">`;
+  ts.appendChild(snip);
+  document.getElementById('app').appendChild(ts);
+}
+render();
+</script>
+</body>
+</html>

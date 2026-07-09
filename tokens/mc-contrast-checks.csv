@@ -1,0 +1,12 @@
+foreground,background,ratio,AA_normal,AA_large,notes
+gold,black,8.83,pass,pass,
+gold,charcoal,8.28,pass,pass,
+gold,forest,5.74,pass,pass,
+charcoal,ivory,18.06,pass,pass,
+charcoal,cream,15.57,pass,pass,
+white,terracotta,3.70,fail,pass,Do not use white normal body text on original terracotta #D46255.
+ivory,terracotta,3.39,fail,pass,
+charcoal,terracotta,5.32,pass,pass,
+gold,ivory,2.18,fail,fail,Avoid as normal text; low contrast. Use charcoal on light fills.
+gold,cream,1.88,fail,fail,Avoid as normal text; low contrast. Use charcoal on light fills.
+white,black,21.00,pass,pass,

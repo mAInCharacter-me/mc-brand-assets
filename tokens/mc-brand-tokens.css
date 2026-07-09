@@ -1,0 +1,24 @@
+:root {
+  /* mAInCharacter logo asset pack tokens. Replace provisional support values with master brand values if available. */
+  --mc-fill-charcoal: #0B0B0A;
+  --mc-fill-ivory: #F8F5EC;
+  --mc-fill-cream: #EFE4C8;
+  --mc-fill-forest: #173327;
+  --mc-fill-gold: #C3A469;
+
+  /* Tertiary semantic fills */
+  --mc-fill-terracotta-human-stakes: #D46255;
+  --mc-fill-crimson-critical-risk: #8F1D2C;
+  --mc-fill-rust-market-pressure: #B85C38;
+
+  /* Text tokens stay separate from fill tokens. */
+  --mc-text-primary: #0B0B0A;
+  --mc-text-inverse: #F8F5EC;
+  --mc-text-muted: #4A463E;
+  --mc-text-link: #173327;
+
+  /* Logo/accent tokens */
+  --mc-logo-primary: #C3A469;
+  --mc-logo-inverse: #F8F5EC;
+  --mc-logo-dark: #0B0B0A;
+}

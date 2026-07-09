@@ -1,0 +1,7 @@
+# OS / editor cruft — keep the asset repo clean
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+._*
