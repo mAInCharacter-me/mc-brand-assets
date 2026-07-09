@@ -84,3 +84,12 @@ Each web file below was copied from the master pack and renamed. Master root:
 | tokens/mc-brand-tokens.css | 07_brand_tokens/mAInCharacter_brand_tokens.css |
 | tokens/mc-brand-tokens.json | 07_brand_tokens/mAInCharacter_brand_tokens.json |
 | tokens/mc-contrast-checks.csv | 07_brand_tokens/mAInCharacter_contrast_checks.csv |
+
+## Added from the Design Templates folder (2026-07-08)
+
+Marks exported from the Mark System SVG Studio (rendered, serialized, normalized — xmlns added, width/height stripped, viewBox kept). DS tokens transcribed from the Design System Canon.
+
+| Web file (this repo) | Source |
+|---|---|
+| marks/*.svg (28) + _marks-registry.json | (Design Templates)/mC Mark System SVG Studio (standalone).html |
+| tokens/mc-ds-tokens.css | (Design Templates)/mC DesignSystem_Canon_v26.06.26.1a-BC.md (tokens/colors_and_type.css values) |

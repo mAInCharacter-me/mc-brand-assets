@@ -1,0 +1,59 @@
+/* mAInCharacter — Design System tokens (web canon)
+   Source of authority: mC_DesignSystem_Canon_v26.06.26. These are the LIVE
+   web values used by the site, portal, and kits. They differ intentionally
+   from the logo-pack tokens in mc-brand-tokens.css (charcoal #121110 vs
+   #0B0B0A, gold #D4AE50 vs #C3A469). For any web surface, prefer THIS file. */
+:root {
+  /* Canvas / surface — charcoal floor, never pure black */
+  --charcoal:      #121110;   /* floor */
+  --charcoal-soft: #1A1817;   /* cards */
+  --charcoal-2:    #211E1B;
+  --hairline:      #242220;
+  --hairline-strong:#2d2a28;
+  --ivory:         #FAF8F3;   /* light flip */
+  --cream:         #F0EBE1;   /* footer / hairlines */
+  --bone:          #FCFBF7;   /* letter paper */
+  --ink:           #121110;
+
+  /* Gold — all the voltage */
+  --gold:       #D4AE50;      /* primary */
+  --gold-hover: #E5BE60;
+  --gold-press: #C09C40;
+  --gold-soft:  #E7C877;      /* pointing-line ball */
+  --gold-deep:  #C3A469;      /* pointing-line stroke, filepaths */
+  --gold-text:  #7A6018;      /* gold on light — labels only, never body */
+  --node:       #C9A227;      /* the single client node in every mark */
+
+  /* Foreground text on dark */
+  --fg:   #EDE7DA;
+  --fg-2: #C7BFAF;
+  --fg-3: #9A9385;
+  --fg-4: #6E685D;
+  --stone:#8A8170;            /* mark stroke on cream */
+
+  /* Secondary / subject / semantic */
+  --forest:   #3E4E45;
+  --sage:     #5A6D61;
+  --copper:   #C06A40;        /* evidence variant */
+  --obsidian: #A98AEF;        /* reserved for the word "Obsidian" only */
+  --up:       #0ecb81;
+  --down:     #f6465d;
+
+  /* Type — strict role split, never substituted */
+  --font-display: 'Cormorant Garamond', serif;   /* display / headlines / letter body */
+  --font-sans:    'Inter', system-ui, sans-serif;/* body / UI — Light 300 default */
+  --font-mono:    'DM Mono', ui-monospace, monospace; /* eyebrows, labels, stats, IDs */
+
+  /* Radius */
+  --r-sm: 4px; --r-md: 6px; --r-lg: 8px; --r-xl: 12px; /* xl = elevated-card standard */
+  --r-pill: 9999px;
+
+  /* Spacing (4px base) */
+  --pad-card: 24px; --pad-band: 32px; --section: 80px;
+
+  /* Touch-target floor (RATIFIED 2026-07-08) */
+  --touch-min: 44px;
+
+  /* The single signature gradient — 4px diplomatic rule, sticky top */
+  --diplomatic: linear-gradient(90deg, var(--gold), var(--sage), var(--forest));
+}
