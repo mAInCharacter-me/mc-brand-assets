@@ -4,13 +4,16 @@ Path: `G:\Shared drives\mAInCharacter_TEAM\2. Digital Resources\mAIn Website\REF
 
 A streamlined, web-optimized subset of the master logo asset pack — built to be
 published to GitHub and referenced by URL from any HTML page, hosted site, or
-email signature. **~3.6 MB, 107 assets** (logos, wordmarks, icons, the 28-mark
-system, favicons, headers, tokens). No source masters, no illustrations, no
-platform-upload exports — only what a web surface actually links to.
+email signature. Logos, wordmarks, icons, favicons, headers, and tokens — no
+source masters, no illustrations, no platform-upload exports, only what a web
+surface actually links to.
 
 Open `index.html` (the live Pages home) to browse everything in the mAInCharacter
-design system — swatches, marks rendered live, and a one-click **Copy URL** on
-every asset.
+design system — swatches and a one-click **Copy URL** on every asset.
+
+> **The mark system lives in its own repo:** [`mc-svg-studio`](https://github.com/OWNER/mc-svg-studio)
+> — 28 line-geometry marks with the gold client node. Kept separate so the mark
+> library can grow on its own.
 
 ---
 
@@ -73,28 +76,16 @@ repo is published, so you never guess a path.
 | `logo/` | 5 horizontal-lockup SVGs + 11 PNG @2048w (on-background and transparent) | Site headers, hero, email, docs |
 | `wordmark/` | `mAIn` and `CHARACTER` component SVGs, 5 colors each | Custom typographic lockups |
 | `icon/` | A-dot + stacked SVGs, square PNGs @1024, transparent @2048, small 128/256/512, circle-safe profiles | App icons, avatars, favicons at large size |
-| `marks/` | 28 line-geometry mark SVGs (Arc-stage, segment/nav, seals) + `_marks-registry.json` | Inline UI icons, section marks, badges |
 | `favicon/` | favicon 16/32/48/64, apple-touch 180, web-app 192/512, OG image 1200×630 | `<head>` tags, social cards |
 | `header/` | Responsive header exports @360/720/1200w (dark-gold, light-charcoal, white-overlay) | `srcset` responsive navs |
 | `tokens/` | Design-system tokens (`mc-ds-tokens.css` — **use this for web**), logo-pack tokens `.css`/`.json`, contrast checks `.csv` | Color variables, design linking |
 
-### The mark system
+### The mark system → `mc-svg-studio`
 
-The 28 marks in `marks/` are exported from the Mark System SVG Studio. Each is a
-clean, standalone SVG that uses `stroke="currentColor"` — so a mark inherits the
-surrounding text color — while the single client node stays canonical gold
-(`#C9A227`). Drop one inline and color it with CSS:
-
-```html
-<span style="color:#D4AE50">
-  <!-- fetch/inline marks/mc-mark-arc.svg, or: -->
-  <img src="https://OWNER.github.io/mc-brand-assets/marks/mc-mark-arc.svg" width="32" alt="Arc">
-</span>
-```
-
-Note: an `<img>` renders `currentColor` as its default (near-black). To recolor a
-mark, inline the SVG markup (see the gallery's mark section, which fetches and
-inlines each one). `marks/_marks-registry.json` maps every slug to its label.
+The 28-mark system (Arc-stage marks, segment/nav marks, seals) is maintained as
+a separate library so it can grow independently: **[mc-svg-studio](https://github.com/OWNER/mc-svg-studio)**.
+Each mark uses `stroke="currentColor"` with the client node fixed at gold
+`#C9A227`. Reference them the same way — Pages or jsDelivr — from that repo.
 
 ### Two token files — which to use
 

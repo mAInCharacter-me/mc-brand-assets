@@ -62,8 +62,6 @@
   .card:hover{border-color:var(--hairline-strong)}
   .thumb{height:132px;display:flex;align-items:center;justify-content:center;padding:18px}
   .thumb img{max-width:100%;max-height:100%;object-fit:contain}
-  .thumb.mark{color:var(--gold)}
-  .thumb.mark svg{width:56px;height:56px}
   .bg-dark{background:#141210}.bg-light{background:var(--ivory)}.bg-cream{background:var(--cream)}
   .bg-forest{background:var(--forest)}
   .bg-check{background-color:#0f0d0c;background-image:
@@ -113,13 +111,14 @@
     <img class="lock" src="logo/mc-logo-gold.svg" alt="mAInCharacter">
     <p class="eyebrow">Brand Asset CDN · v1.0.0</p>
     <h1>m<span class="ai">AI</span>nCharacter brand assets, <br>served from one place.</h1>
-    <p class="lede">Every web-ready logo, mark, icon, favicon, header, and token — <em>point every surface to a single source.</em> Pick an asset, copy its live URL, paste it into your HTML.</p>
+    <p class="lede">Every web-ready logo, icon, favicon, header, and token — <em>point every surface to a single source.</em> Pick an asset, copy its live URL, paste it into your HTML.</p>
     <div class="stats">
       <div class="stat"><div class="n" id="s-total">—</div><div class="l">assets</div></div>
-      <div class="stat"><div class="n">28</div><div class="l">mark system</div></div>
       <div class="stat"><div class="n">23</div><div class="l">vector lockups</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">token files</div></div>
       <div class="stat"><div class="n">2</div><div class="l">CDN routes</div></div>
     </div>
+    <p class="lede" style="font-size:16px;margin-top:22px">The 28-mark system lives in its own library — <a href="https://github.com/OWNER/mc-svg-studio">mc-svg-studio</a>.</p>
   </div>
 </header>
 
@@ -142,7 +141,7 @@
   <div class="wrap">
     <p class="eyebrow">Provenance</p>
     <h3>One source of truth.</h3>
-    <p>Assets are derived from the master logo pack and the Design System Canon (v26.06.26); marks are exported from the Mark System SVG Studio. See <a href="SOURCE_MAP.md">SOURCE_MAP.md</a> and <a href="README.md">README.md</a>. Regenerate this web subset from the masters rather than editing here. Every mark carries exactly one gold node — always the client.</p>
+    <p>Assets are derived from the master logo pack and the Design System Canon (v26.06.26). See <a href="SOURCE_MAP.md">SOURCE_MAP.md</a> and <a href="README.md">README.md</a>. Regenerate this web subset from the masters rather than editing here. The 28-mark system is maintained separately in the <a href="https://github.com/OWNER/mc-svg-studio">mc-svg-studio</a> repo.</p>
   </div>
 </footer>
 
@@ -205,12 +204,7 @@ const ASSETS=[
     {p:"header/mc-header-light-1200.png",bg:"light"},{p:"header/mc-header-light-720.png",bg:"light"},{p:"header/mc-header-light-360.png",bg:"light"},
     {p:"header/mc-header-overlay-1200.png",bg:"forest"},{p:"header/mc-header-overlay-720.png",bg:"forest"},{p:"header/mc-header-overlay-360.png",bg:"forest"}]}
 ];
-const MARKS=[
-  {group:"Arc-stage marks",items:["mc-mark-a-dot","mc-mark-initial-consultation","mc-mark-compass","mc-mark-arc","mc-mark-counsel","mc-mark-charter","mc-mark-legacy","mc-mark-mc-arrow"]},
-  {group:"Segment & nav marks",items:["mc-mark-organization-leaders","mc-mark-business-services-leaders","mc-mark-entrepreneur","mc-mark-discovery","mc-mark-elevate","mc-mark-reinvent","mc-mark-ai-workflow-setup","mc-mark-coach-exchange","mc-mark-developer-marketplace","mc-mark-fund","mc-mark-b2b-siaas","mc-mark-b2c-software","mc-mark-workshops-and-courses","mc-mark-modelling-workshop","mc-mark-intelligence-engine"]},
-  {group:"Seals & networks",items:["mc-mark-board-of-experts","mc-mark-quiet-network","mc-mark-sovereign-data","mc-mark-vetted-by-maincharacter","mc-mark-covenant-seal"]}
-];
-const TOKENS=["tokens/mc-ds-tokens.css","tokens/mc-brand-tokens.css","tokens/mc-brand-tokens.json","tokens/mc-contrast-checks.csv","marks/_marks-registry.json","site.webmanifest"];
+const TOKENS=["tokens/mc-ds-tokens.css","tokens/mc-brand-tokens.css","tokens/mc-brand-tokens.json","tokens/mc-contrast-checks.csv","site.webmanifest"];
 
 const owner=document.getElementById('owner'),repo=document.getElementById('repo'),ref=document.getElementById('ref'),cfgnote=document.getElementById('cfgnote');
 let mode="pages";
@@ -245,15 +239,6 @@ function assetCard(it){
   el.querySelector('.copy').onclick=e=>copyURL(e.target,it.p);
   return el;
 }
-function markCard(slug){
-  const el=document.createElement('div');el.className='card';
-  const p="marks/"+slug+".svg";
-  el.innerHTML=`<div class="thumb mark" data-mark="${p}"></div>
-    <div class="meta"><span class="fname">${slug}.svg</span><span class="fkind" data-label>SVG · currentColor</span>
-    <button class="copy">Copy URL</button></div>`;
-  el.querySelector('.copy').onclick=e=>copyURL(e.target,p);
-  return el;
-}
 function section(title,sub){const s=document.createElement('section');
   s.innerHTML=`<div class="sechead"><h2>${title}</h2><p>${sub}</p></div>`;return s;}
 
@@ -267,16 +252,6 @@ const app=document.getElementById('app');
     d.innerHTML=`<div class="chip" style="background:${c.hx}"></div><div class="txt"><div class="nm">--${c.nm}</div><div class="hx">${c.hx}</div><div class="rl">${c.rl}</div></div>`;
     g.appendChild(d);});
   s.appendChild(g);app.appendChild(s);})();
-
-// Mark system
-(function(){const s=section("The mark system","Line-geometry marks, 24–32px viewBox, stroke 1.6, round caps. Every mark carries exactly one gold node — always the client. SVGs use <code style='font-family:var(--font-mono);color:var(--gold-soft)'>currentColor</code>, so they take your text color; the node stays gold.");
-  MARKS.forEach(grp=>{
-    const h=document.createElement('p');h.className='eyebrow';h.style.margin='26px 0 12px';h.textContent=grp.group;
-    s.appendChild(h);
-    const g=document.createElement('div');g.className='grid';
-    grp.items.forEach(slug=>g.appendChild(markCard(slug)));
-    s.appendChild(g);});
-  app.appendChild(s);})();
 
 // Asset sections
 ASSETS.forEach(sec=>{const s=section(sec.title,sec.sub);
@@ -295,19 +270,7 @@ ASSETS.forEach(sec=>{const s=section(sec.title,sec.sub);
 })();
 
 // count
-document.getElementById('s-total').textContent=
-  ASSETS.reduce((n,s)=>n+s.items.length,0)+MARKS.reduce((n,g)=>n+g.items.length,0);
-
-// Inline the mark SVGs so currentColor renders in gold
-(async function(){
-  const boxes=[...document.querySelectorAll('.thumb.mark')];
-  for(const box of boxes){
-    try{const r=await fetch(box.dataset.mark);const t=await r.text();box.innerHTML=t;
-      const lbl=box.closest('.card').querySelector('[data-label]');
-      const al=box.querySelector('svg')?.getAttribute('aria-label');if(al&&lbl)lbl.textContent=al+' · SVG';
-    }catch(e){box.textContent='—';}
-  }
-})();
+document.getElementById('s-total').textContent=ASSETS.reduce((n,s)=>n+s.items.length,0);
 </script>
 </body>
 </html>

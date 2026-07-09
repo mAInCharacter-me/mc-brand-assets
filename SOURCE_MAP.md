@@ -87,9 +87,12 @@ Each web file below was copied from the master pack and renamed. Master root:
 
 ## Added from the Design Templates folder (2026-07-08)
 
-Marks exported from the Mark System SVG Studio (rendered, serialized, normalized — xmlns added, width/height stripped, viewBox kept). DS tokens transcribed from the Design System Canon.
+DS tokens transcribed from the Design System Canon.
 
 | Web file (this repo) | Source |
 |---|---|
-| marks/*.svg (28) + _marks-registry.json | (Design Templates)/mC Mark System SVG Studio (standalone).html |
 | tokens/mc-ds-tokens.css | (Design Templates)/mC DesignSystem_Canon_v26.06.26.1a-BC.md (tokens/colors_and_type.css values) |
+
+The 28-mark system was moved to its own repo, **mc-svg-studio** (rendered from
+`(Design Templates)/mC Mark System SVG Studio (standalone).html`). See that
+repo's own SOURCE notes.
