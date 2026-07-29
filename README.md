@@ -11,7 +11,7 @@ surface actually links to.
 Open `index.html` (the live Pages home) to browse everything in the mAInCharacter
 design system — swatches and a one-click **Copy URL** on every asset.
 
-> **The mark system lives in its own repo:** [`mc-svg-studio`](https://github.com/OWNER/mc-svg-studio)
+> **The mark system lives in its own repo:** [`mc-marks`](https://github.com/mAInCharacter-me/mc-marks)
 > — 28 line-geometry marks with the gold client node. Kept separate so the mark
 > library can grow on its own.
 
@@ -19,19 +19,19 @@ design system — swatches and a one-click **Copy URL** on every asset.
 
 ## Two ways to reference (both point at this repo)
 
-Replace `OWNER` with the GitHub account or org that owns the repo, and keep the
-repo named `mc-brand-assets` (or update the base path to match).
+The repository is privately owned by the `mAInCharacter-me` organization and is
+named `mc-brand-assets`.
 
 **1. GitHub Pages** — clean, correct MIME types, Fastly-backed, always-latest:
 
 ```
-https://OWNER.github.io/mc-brand-assets/<path>
+https://mAInCharacter-me.github.io/mc-brand-assets/<path>
 ```
 
 **2. jsDelivr CDN** — versioned and globally cached (recommended for production):
 
 ```
-https://cdn.jsdelivr.net/gh/OWNER/mc-brand-assets@main/<path>
+https://cdn.jsdelivr.net/gh/mAInCharacter-me/mc-brand-assets@main/<path>
 ```
 
 Pin a release instead of `@main` for stability, e.g. `@v1.0.0`.
@@ -40,11 +40,11 @@ Pin a release instead of `@main` for stability, e.g. `@v1.0.0`.
 
 ```html
 <!-- SVG, scales crisply at any size -->
-<img src="https://OWNER.github.io/mc-brand-assets/logo/mc-logo-gold.svg"
+<img src="https://mAInCharacter-me.github.io/mc-brand-assets/logo/mc-logo-gold.svg"
      alt="mAInCharacter" height="40">
 
 <!-- or via jsDelivr, version-pinned -->
-<img src="https://cdn.jsdelivr.net/gh/OWNER/mc-brand-assets@v1.0.0/logo/mc-logo-gold.svg"
+<img src="https://cdn.jsdelivr.net/gh/mAInCharacter-me/mc-brand-assets@v1.0.0/logo/mc-logo-gold.svg"
      alt="mAInCharacter" height="40">
 ```
 
@@ -52,15 +52,15 @@ Pin a release instead of `@main` for stability, e.g. `@v1.0.0`.
 
 ```html
 <link rel="icon" type="image/png" sizes="32x32"
-      href="https://OWNER.github.io/mc-brand-assets/favicon/favicon-32.png">
+      href="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/favicon-32.png">
 <link rel="apple-touch-icon"
-      href="https://OWNER.github.io/mc-brand-assets/favicon/apple-touch-icon-180.png">
+      href="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/apple-touch-icon-180.png">
 <link rel="manifest"
-      href="https://OWNER.github.io/mc-brand-assets/site.webmanifest">
+      href="https://mAInCharacter-me.github.io/mc-brand-assets/site.webmanifest">
 <meta property="og:image"
-      content="https://OWNER.github.io/mc-brand-assets/favicon/og-image-1200x630.png">
+      content="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/og-image-1200x630.png">
 <link rel="stylesheet"
-      href="https://OWNER.github.io/mc-brand-assets/tokens/mc-brand-tokens.css">
+      href="https://mAInCharacter-me.github.io/mc-brand-assets/tokens/mc-brand-tokens.css">
 ```
 
 Open `index.html` (the live Pages home page) to browse every asset with a
@@ -80,10 +80,10 @@ repo is published, so you never guess a path.
 | `header/` | Responsive header exports @360/720/1200w (dark-gold, light-charcoal, white-overlay) | `srcset` responsive navs |
 | `tokens/` | Design-system tokens (`mc-ds-tokens.css` — **use this for web**), logo-pack tokens `.css`/`.json`, contrast checks `.csv` | Color variables, design linking |
 
-### The mark system → `mc-svg-studio`
+### The mark system → `mc-marks`
 
 The 28-mark system (Arc-stage marks, segment/nav marks, seals) is maintained as
-a separate library so it can grow independently: **[mc-svg-studio](https://github.com/OWNER/mc-svg-studio)**.
+a separate library so it can grow independently: **[mc-marks](https://github.com/mAInCharacter-me/mc-marks)**.
 Each mark uses `stroke="currentColor"` with the client node fixed at gold
 `#C9A227`. Reference them the same way — Pages or jsDelivr — from that repo.
 
@@ -115,13 +115,13 @@ git init
 git add .
 git commit -m "mAInCharacter web brand assets v1.0.0"
 git branch -M main
-git remote add origin https://github.com/OWNER/mc-brand-assets.git
+git remote add origin https://github.com/mAInCharacter-me/mc-brand-assets.git
 git push -u origin main
 git tag v1.0.0 && git push --tags   # enables version-pinned jsDelivr URLs
 ```
 
 Then on github.com: **Settings → Pages → Source: `main` / root** → Save.
-Pages goes live at `https://OWNER.github.io/mc-brand-assets/` within a minute.
+Pages goes live at `https://mAInCharacter-me.github.io/mc-brand-assets/` within a minute.
 
 `.nojekyll` is included so GitHub Pages serves every folder untouched.
 
