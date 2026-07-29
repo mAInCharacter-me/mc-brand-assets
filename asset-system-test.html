@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mAInCharacter Asset System Test</title>
+  <style>
+    :root{--black:#121110;--ivory:#f8f5ec;--gold:#d4ae50;--line:#d8d0bf;--muted:#6e685e}
+    *{box-sizing:border-box} body{margin:0;background:var(--ivory);color:var(--black);font:16px/1.6 system-ui,sans-serif}
+    main{max-width:1100px;margin:auto;padding:42px 24px 80px} h1,h2{font-family:Georgia,serif;font-weight:500} h1{font-size:clamp(38px,7vw,78px);line-height:.95;margin:0 0 18px} h2{font-size:30px;border-bottom:1px solid var(--black);padding-bottom:10px;margin-top:48px}
+    .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#8a6c22}.intro{max-width:720px;font-size:19px}.panel{background:var(--black);color:var(--ivory);padding:28px;border-radius:8px}.panel a{color:var(--gold)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);padding:16px;border-radius:6px}.card.dark{background:var(--black);color:var(--ivory)} .card img{display:block;max-width:100%;height:72px;object-fit:contain;margin:auto}.dark img{background:#211f1c}.swatch{height:100px;display:grid;place-items:center;border-radius:4px}.swatch img{max-height:60px;max-width:90%}.small{font-size:13px;color:var(--muted)} code{font-size:12px;word-break:break-all}.check{color:#2d6b42;font-weight:700}.footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">mAInCharacter · Asset System Test · 2026-07-29</div>
+  <h1>One brand system.<br>Many surfaces.</h1>
+  <p class="intro">This page tests the public web asset pack that future mC websites, SaaS products, social profiles, documents, and email signatures can reference. The protected vector source system remains in the private <a href="https://github.com/mAInCharacter-me/mc-marks">mc-marks repository</a>.</p>
+
+  <section class="panel">
+    <strong>What is being tested</strong>
+    <p>Live GitHub Pages delivery, versioned CDN delivery, logo variants, icons, tokens, favicons, and a simple implementation pattern that another developer can copy.</p>
+    <p><a href="https://github.com/mAInCharacter-me/mc-brand-assets">Open the public asset repository →</a> · <a href="https://cdn.jsdelivr.net/gh/mAInCharacter-me/mc-brand-assets@v1.0.0/logo/mc-logo-gold.svg">Open a pinned CDN asset →</a></p>
+  </section>
+
+  <h2>1. Logo variants</h2>
+  <div class="grid">
+    <div class="card dark"><img src="logo/mc-logo-gold.svg" alt="mAInCharacter gold logo"><strong>Gold on charcoal</strong><div class="small">Primary dark-surface use</div></div>
+    <div class="card"><img src="logo/mc-logo-charcoal.svg" alt="mAInCharacter charcoal logo"><strong>Charcoal on light</strong><div class="small">Dense copy and light surfaces</div></div>
+    <div class="card dark"><img src="logo/mc-logo-ivory.svg" alt="mAInCharacter ivory logo"><strong>Ivory on dark</strong><div class="small">High-contrast alternate</div></div>
+  </div>
+
+  <h2>2. Icons and social identity</h2>
+  <div class="grid">
+    <div class="card dark"><img src="icon/mc-icon-gold.svg" alt="mAInCharacter gold icon"><strong>A-dot mark</strong></div>
+    <div class="card"><img src="icon/mc-icon-charcoal.svg" alt="mAInCharacter charcoal icon"><strong>Application icon</strong></div>
+    <div class="card"><img src="favicon/og-image-1200x630.png" alt="mAInCharacter social card"><strong>Social preview card</strong></div>
+  </div>
+
+  <h2>3. Brand tokens</h2>
+  <div class="grid">
+    <div class="card"><div class="swatch" style="background:#121110;color:#d4ae50">Charcoal + gold</div><code>tokens/mc-ds-tokens.css</code></div>
+    <div class="card"><div class="swatch" style="background:#f8f5ec;color:#121110">Ivory + charcoal</div><code>tokens/mc-ds-tokens.css</code></div>
+    <div class="card"><div class="swatch" style="background:#173327;color:#d4ae50">Forest + gold</div><code>tokens/mc-ds-tokens.css</code></div>
+  </div>
+
+  <h2>4. Developer primer</h2>
+  <div class="card">
+    <p><span class="check">✓</span> Use this public repository for web-deliverable assets.</p>
+    <p><span class="check">✓</span> Pin production URLs to <code>@v1.0.0</code>; use <code>@main</code> only for controlled previews.</p>
+    <p><span class="check">✓</span> Use <code>mc-marks</code> for the canonical vector mark system and proposed mark taxonomy.</p>
+    <p><span class="check">✓</span> Do not edit the master raster package or copy private source files into a product repo.</p>
+    <pre><code>&lt;img src="https://maincharacter-me.github.io/mc-brand-assets/logo/mc-logo-gold.svg"
+     alt="mAInCharacter" height="40"&gt;</code></pre>
+  </div>
+
+  <h2>5. Business primer for Tom</h2>
+  <div class="card">
+    <p>mC now has two connected but separate brand layers: a private source-of-truth mark system and a public web asset library. This prevents every website or SaaS project from inventing its own logo treatment while keeping the underlying design system controlled.</p>
+    <p>The growth strategy is to use the same trusted identity across the advisory relationship, future digital products, social content, and the Asset Store. The first commercial proof should be one narrow mC-authored artifact. The website is the credibility layer; content creates attention; the Asset Store creates a low-friction purchase; advisory remains the high-value relationship.</p>
+    <p><strong>Not yet included:</strong> D13–D15 rights, take-rate, and commercialization decisions. Those remain intentionally open.</p>
+  </div>
+
+  <div class="footer">Source repos: <a href="https://github.com/mAInCharacter-me/mc-brand-assets">mc-brand-assets</a> (public web pack) · <a href="https://github.com/mAInCharacter-me/mc-marks">mc-marks</a> (private vector source). This page is a technical and strategic test, not a public offer or legal terms.</div>
+</main>
+</body>
+</html>
