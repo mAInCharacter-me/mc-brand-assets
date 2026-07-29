@@ -25,7 +25,7 @@ named `mc-brand-assets`.
 **1. GitHub Pages** — clean, correct MIME types, Fastly-backed, always-latest:
 
 ```
-https://mAInCharacter-me.github.io/mc-brand-assets/<path>
+https://maincharacter-me.github.io/mc-brand-assets/<path>
 ```
 
 **2. jsDelivr CDN** — versioned and globally cached (recommended for production):
@@ -40,7 +40,7 @@ Pin a release instead of `@main` for stability, e.g. `@v1.0.0`.
 
 ```html
 <!-- SVG, scales crisply at any size -->
-<img src="https://mAInCharacter-me.github.io/mc-brand-assets/logo/mc-logo-gold.svg"
+<img src="https://maincharacter-me.github.io/mc-brand-assets/logo/mc-logo-gold.svg"
      alt="mAInCharacter" height="40">
 
 <!-- or via jsDelivr, version-pinned -->
@@ -52,15 +52,15 @@ Pin a release instead of `@main` for stability, e.g. `@v1.0.0`.
 
 ```html
 <link rel="icon" type="image/png" sizes="32x32"
-      href="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/favicon-32.png">
+      href="https://maincharacter-me.github.io/mc-brand-assets/favicon/favicon-32.png">
 <link rel="apple-touch-icon"
-      href="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/apple-touch-icon-180.png">
+      href="https://maincharacter-me.github.io/mc-brand-assets/favicon/apple-touch-icon-180.png">
 <link rel="manifest"
-      href="https://mAInCharacter-me.github.io/mc-brand-assets/site.webmanifest">
+      href="https://maincharacter-me.github.io/mc-brand-assets/site.webmanifest">
 <meta property="og:image"
-      content="https://mAInCharacter-me.github.io/mc-brand-assets/favicon/og-image-1200x630.png">
+      content="https://maincharacter-me.github.io/mc-brand-assets/favicon/og-image-1200x630.png">
 <link rel="stylesheet"
-      href="https://mAInCharacter-me.github.io/mc-brand-assets/tokens/mc-brand-tokens.css">
+      href="https://maincharacter-me.github.io/mc-brand-assets/tokens/mc-brand-tokens.css">
 ```
 
 Open `index.html` (the live Pages home page) to browse every asset with a
@@ -121,7 +121,7 @@ git tag v1.0.0 && git push --tags   # enables version-pinned jsDelivr URLs
 ```
 
 Then on github.com: **Settings → Pages → Source: `main` / root** → Save.
-Pages goes live at `https://mAInCharacter-me.github.io/mc-brand-assets/` within a minute.
+Pages goes live at `https://maincharacter-me.github.io/mc-brand-assets/` within a minute.
 
 `.nojekyll` is included so GitHub Pages serves every folder untouched.
 
