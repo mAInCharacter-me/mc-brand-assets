@@ -12,9 +12,15 @@ No asset path changed. Everything at a `v1.0.0` URL still resolves.
 - `SECURITY.md` — official channels and how to report impersonation.
 - `manifest.json` — SHA-256 of every published file, with `kind` per file
   (`vector`, `raster-in-svg`, `raster`, `tokens`) and `deprecated` flags.
-- `scripts/build-manifest.mjs` and `scripts/lint-svg.mjs`.
+- Embedded ownership metadata in all 74 assets. SVG: comment header, `<title>`,
+  `<desc>`, Dublin Core and XMP Rights. PNG: `tEXt` chunks, plus an XMP packet
+  above 32 KB and a two-field short form below 4 KB. Pixel data and vector
+  geometry are byte-identical; verified across 51 PNGs and 23 SVGs.
+- `scripts/stamp-metadata.mjs`, `scripts/build-manifest.mjs` and
+  `scripts/lint-svg.mjs`.
 - `.github/workflows/verify-assets.yml` — every push and pull request: no
-  executable SVG, no internal paths, manifest matches the tree.
+  executable SVG, no internal paths, every asset stamped, manifest matches the
+  tree.
 - `.github/CODEOWNERS`.
 
 ### Changed

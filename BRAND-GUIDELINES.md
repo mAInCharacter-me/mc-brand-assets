@@ -64,6 +64,18 @@ Character. Use it as a name, never as a verb or a plural.
 | Social preview card | `favicon/og-image-1200x630.png` |
 | A vector A-dot | `marks/mc-a-dot.svg` once published. Until then, use `icon/png/` at the size you need; the `icon/*.svg` files wrap a raster image and do not scale. |
 
+## Embedded ownership metadata
+
+Every file carries its owner, rights and origin inside itself. SVGs hold a
+comment header, `<title>`, `<desc>` and a Dublin Core and XMP Rights block.
+PNGs hold `tEXt` chunks and, above 32 KB, an XMP packet.
+
+Do not strip it. If your build pipeline runs an optimizer, configure it to
+preserve metadata: SVGO needs `removeComments`, `removeMetadata`,
+`removeTitle` and `removeDesc` disabled, and image compressors need their
+metadata-stripping flag off. If you must ship a stripped copy for size
+reasons, keep the attribution visible somewhere on the surface instead.
+
 ## Verifying a file
 
 Every published file is listed in `manifest.json` with its SHA-256. A file whose
@@ -71,6 +83,7 @@ hash is not in the manifest is not an official mAInCharacter asset.
 
 ```bash
 sha256sum mc-logo-gold.svg
+exiftool -Copyright -Rights -Source logo/png/mc-logo-gold-on-black-2048.png
 ```
 
 Compare the output with the entry for `logo/mc-logo-gold.svg` in `manifest.json`.

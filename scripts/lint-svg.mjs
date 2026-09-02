@@ -38,7 +38,13 @@ const RULES = [
 ];
 
 async function walk(p) {
-  const st = await fs.stat(p);
+  let st;
+  try {
+    st = await fs.stat(p);
+  } catch (e) {
+    if (e.code === "ENOENT") return []; // a folder that does not exist yet is not a failure
+    throw e;
+  }
   if (st.isFile()) return p.toLowerCase().endsWith(".svg") ? [p] : [];
   const out = [];
   for (const e of await fs.readdir(p, { withFileTypes: true })) {

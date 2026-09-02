@@ -36,5 +36,8 @@ jobs:
           fi
           echo "No internal paths found."
 
+      - name: Every asset carries ownership metadata
+        run: node scripts/stamp-metadata.mjs --check
+
       - name: manifest.json matches the tree
         run: node scripts/build-manifest.mjs --check

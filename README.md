@@ -24,6 +24,30 @@ mAInCharacter publishes from these places and no others:
 A page, account, repository or message that carries these marks and is not on
 this list is not ours. Report it: [`SECURITY.md`](SECURITY.md).
 
+## Every file says whose it is
+
+Each asset carries its own ownership record, so a file that travels away from
+this repository still names its owner and terms.
+
+- **SVG** — a comment header, `<title>`, `<desc>`, and a Dublin Core and XMP
+  Rights block. Open any `.svg` in a text editor and read it.
+- **PNG** — `tEXt` chunks (Title, Author, Copyright, Source, Software, Comment)
+  that Windows Explorer, macOS Preview, ImageMagick and exiftool all show, plus
+  an XMP packet on files over 32 KB for Adobe tools. Favicons carry a two-field
+  short form so a 400-byte icon does not gain 2 KB of metadata.
+
+```bash
+exiftool -Copyright -Rights logo/png/mc-logo-gold-on-black-2048.png
+```
+
+Pixel data and vector geometry are untouched: the metadata sits in ancillary
+chunks and elements. `scripts/stamp-metadata.mjs` writes it and CI refuses any
+asset that lacks it.
+
+This is provenance, not protection. Anyone determined can strip it. Its jobs
+are that an honest recipient can read the terms, a careless reuse carries the
+notice along, and a stripped file is evidence of intent.
+
 ## Verifying that an asset is official
 
 Every file here is listed in [`manifest.json`](manifest.json) with its SHA-256.
