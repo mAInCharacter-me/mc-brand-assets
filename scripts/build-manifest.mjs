@@ -51,6 +51,16 @@ async function walk(dir) {
   return out;
 }
 
+// Git normalizes these to LF on commit (see .gitattributes), so a Windows working tree can
+// hold CRLF while the blob everyone downloads holds LF. Hash the canonical LF form, which is
+// what a consumer actually receives from raw.githubusercontent or a release archive.
+const TEXT_EXT = new Set([".svg", ".css", ".json", ".csv", ".html", ".md", ".webmanifest", ".txt", ".yml", ".yaml"]);
+
+function canonical(rel, buf) {
+  if (!TEXT_EXT.has(path.extname(rel).toLowerCase())) return buf;
+  return Buffer.from(buf.toString("utf8").replace(/\r\n/g, "\n"), "utf8");
+}
+
 function kindOf(rel, buf) {
   const ext = path.extname(rel).toLowerCase();
   if (rel.startsWith("marks/") && ext === ".json") return "manifest";
@@ -67,7 +77,8 @@ const files = [];
 for (const d of ASSET_DIRS) {
   for (const p of await walk(path.join(root, d))) {
     const rel = path.relative(root, p).split(path.sep).join("/");
-    const buf = await fs.readFile(p);
+    const raw = await fs.readFile(p);
+    const buf = canonical(rel, raw);
     files.push({
       path: rel,
       bytes: buf.length,
@@ -78,7 +89,7 @@ for (const d of ASSET_DIRS) {
 }
 for (const f of ROOT_FILES) {
   try {
-    const buf = await fs.readFile(path.join(root, f));
+    const buf = canonical(f, await fs.readFile(path.join(root, f)));
     files.push({ path: f, bytes: buf.length, sha256: createHash("sha256").update(buf).digest("hex"), kind: "tokens" });
   } catch {}
 }

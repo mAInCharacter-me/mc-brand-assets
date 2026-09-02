@@ -2,7 +2,7 @@
   "name": "mc-brand-assets",
   "title": "mAInCharacter public brand assets",
   "version": "1.1.0",
-  "commit": "9084c0a9b00e72635f1710f3e975a9d3dc4aaea1",
+  "commit": "bcba42bbff58e8c34c6916039f0f4403db845fa9",
   "generated": "2026-09-02",
   "owner": "mAInCharacter Advisory LLC",
   "license": "LICENSE.md (trademark permission, not an open-source license)",
@@ -432,8 +432,8 @@
     },
     {
       "path": "tokens/mc-contrast-checks.csv",
-      "bytes": 592,
-      "sha256": "a115e9fb755e1824269892db84e3b6b52aa6149f86c2418d0ceff577b89d219a",
+      "bytes": 580,
+      "sha256": "911a07094064e6a4784a546d62b1af32873608e51832d59d53eee3d2bc795e3a",
       "kind": "tokens"
     },
     {
