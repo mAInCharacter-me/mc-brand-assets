@@ -1,8 +1,7 @@
 # SOURCE_MAP — mAInCharacter web assets
 
-Path: `G:\Shared drives\mAInCharacter_TEAM\2. Digital Resources\mAIn Website\REFINED LOGO\mc-brand-assets-github`
 
-Each web file below was copied from the master pack and renamed. Master root:
+Each web file below was copied from the mAInCharacter master logo pack and renamed. Master pack folder names:
 `((MASTER_mCr_logo_asset_pack`
 
 | Web file (this repo) | Source file (master pack) |

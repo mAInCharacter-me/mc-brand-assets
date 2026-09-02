@@ -1,0 +1,40 @@
+name: Verify assets
+
+# Every push and pull request: no executable SVG, no internal paths,
+# and manifest.json must match the files actually in the tree.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: SVGs must not execute or phone home
+        # Legacy icon/*.svg wrap a raster <image>; allowed until marks/ replaces them.
+        run: node scripts/lint-svg.mjs logo wordmark icon marks --allow-embedded-raster
+
+      - name: No internal paths or staging hosts in public text
+        run: |
+          set -e
+          if grep -rInE "Shared drives|G:\\\\|[A-Za-z]:\\\\Users|vercel\.app" --include="*.md" --include="*.html" --include="*.json" --include="*.css" --exclude-dir=.git --exclude-dir=node_modules . ; then
+            echo "::error::Internal path or staging host found in public text."
+            exit 1
+          fi
+          echo "No internal paths found."
+
+      - name: manifest.json matches the tree
+        run: node scripts/build-manifest.mjs --check
