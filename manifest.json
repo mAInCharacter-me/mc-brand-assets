@@ -1,0 +1,506 @@
+{
+  "name": "mc-brand-assets",
+  "title": "mAInCharacter public brand assets",
+  "version": "1.1.0",
+  "commit": "bcba42bbff58e8c34c6916039f0f4403db845fa9",
+  "generated": "2026-09-02",
+  "owner": "mAInCharacter Advisory LLC",
+  "license": "LICENSE.md (trademark permission, not an open-source license)",
+  "guidelines": "BRAND-GUIDELINES.md",
+  "verify": "Download a file, run sha256sum on it, and compare with the entry below. A file whose hash is not here is not an official mAInCharacter asset.",
+  "officialChannels": [
+    "https://main-character.me",
+    "https://github.com/mAInCharacter-me",
+    "@main-character.me"
+  ],
+  "counts": {
+    "raster": 51,
+    "raster-in-svg": 8,
+    "vector": 15,
+    "tokens": 5
+  },
+  "files": [
+    {
+      "path": "favicon/apple-touch-icon-180.png",
+      "bytes": 7969,
+      "sha256": "bece2d1b7a7e7040577aeaa94c778264fd749fa9fea1eecf662b4c4ce5245536",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/favicon-16.png",
+      "bytes": 585,
+      "sha256": "9b5a69cfde7e6b6ee8c45b1546259ad205a8e775e8463d85c666a2acf3200759",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/favicon-32.png",
+      "bytes": 1088,
+      "sha256": "058a763e08db5b2998f129533742d772ebe0b4de7e28930a0fe0e2b930457e7d",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/favicon-48.png",
+      "bytes": 1666,
+      "sha256": "b0e0b3c4612ad37ab6139bac3e5aeb8b3df21202d6823b1dadb3945c08bc122c",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/favicon-64.png",
+      "bytes": 2398,
+      "sha256": "6beca7584b5fb97d8afbc7ff1864ca04d0b81603fc361d52aca03aa016bab06a",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/og-image-1200x630.png",
+      "bytes": 40070,
+      "sha256": "7bd19e601762e3b88b0c74175cbec75fc86f2502d4a143debd95bdcb7fbb3a30",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/web-app-icon-192.png",
+      "bytes": 8623,
+      "sha256": "ddfc949cbf8c5f59eb72b89da1d8048fc13c5e49b80196fe9a3d2379339c726d",
+      "kind": "raster"
+    },
+    {
+      "path": "favicon/web-app-icon-512.png",
+      "bytes": 26520,
+      "sha256": "c004ed12d01b89efcdb0da687b75182a26bf9dea3932bb9906431eecdce2d9ab",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-dark-1200.png",
+      "bytes": 62633,
+      "sha256": "65c653ff1d0a5048a5615fde6aac8c0a5536ef6c3df2a1074968c1ab70ae2bbb",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-dark-360.png",
+      "bytes": 16764,
+      "sha256": "a9e3102938f43e97e346f7aa9288e38db8d36d8c4ee64e861fcaac9f506d6aca",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-dark-720.png",
+      "bytes": 36389,
+      "sha256": "b9a1daae61c39c8165970b54104498b6f61ac10eb1eda4b9a14dbc60bd8d3c2a",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-light-1200.png",
+      "bytes": 43206,
+      "sha256": "53fca172342f2d7ffeec32f6b66edcea5fd5409e7ffc9fbcb9fd388e10627c90",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-light-360.png",
+      "bytes": 11233,
+      "sha256": "831e9f043d3ac192f908b1fe55d6ab4e822e08a46bc69367b555b50c8bc9d605",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-light-720.png",
+      "bytes": 23533,
+      "sha256": "d5454d042720238933a5ac8b99a4b556e1a53276dcf9ef741c314d1796f5978d",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-overlay-1200.png",
+      "bytes": 37494,
+      "sha256": "9773398d9259c6f7964fbcd56d66210ee3f4f058b0009d9a1f4ebf65de920e01",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-overlay-360.png",
+      "bytes": 9342,
+      "sha256": "53582d1684a316e51e4679ae5d49e8cded8a1c1d05c1735f797bf37e091f1ef4",
+      "kind": "raster"
+    },
+    {
+      "path": "header/mc-header-overlay-720.png",
+      "bytes": 19585,
+      "sha256": "d20134943ee89ac46e57bfe6395d16b81f7526e758ded8a7edf297acea11e600",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/mc-icon-black.svg",
+      "bytes": 57934,
+      "sha256": "20d309f7a3a4c949a595a9846a10c6369e23acf5d7879b71d407f17108814fd7",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-charcoal.svg",
+      "bytes": 64344,
+      "sha256": "a960390a73cf6bde273616e530ba80106a646219f4b5ce1f9b216cfc5574a908",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-gold.svg",
+      "bytes": 63484,
+      "sha256": "3c24f98b45060f4207d690e4bf326daaf28f168e8c02cdd74af44e575b409508",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-ivory.svg",
+      "bytes": 63450,
+      "sha256": "b9c2c08b5aaa63344aa7ec7746504cbcfca93e4f30e8b46075353780729ec93a",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-stacked-gold.svg",
+      "bytes": 63530,
+      "sha256": "900e8ec00ce2e26c0251bdc72dd6dcd3fb16093a01b459b0ed2ed64fdf773f50",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-stacked-ivory.svg",
+      "bytes": 63496,
+      "sha256": "c2c863ed12c0aad2707336480dd18db7abd534e95e9d0442e0a8e14106f5ba84",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-stacked-white.svg",
+      "bytes": 63568,
+      "sha256": "68ac6c4e708b481106780d6a2a6ebe8a6e2819e384535c1657fa38c0b45f0011",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/mc-icon-white.svg",
+      "bytes": 63522,
+      "sha256": "7859c3dfe5045a7b0222b50abbfd610a1cb415840f4912e082fdc1b5591d1a3a",
+      "kind": "raster-in-svg",
+      "deprecated": "raster wrapped in SVG; does not scale. Use icon/png at the size you need, or marks/mc-a-dot.svg once published."
+    },
+    {
+      "path": "icon/png/mc-icon-black-transparent-2048.png",
+      "bytes": 139308,
+      "sha256": "3a7bc32437136472beac184d34f3a27a39609c068ffc287eea09880f71dc6c47",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-charcoal-128.png",
+      "bytes": 3406,
+      "sha256": "f6cac74e90928e8a5c706a62f2b841329a1ec82032cb9cafff30be1ddb08f0d0",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-charcoal-256.png",
+      "bytes": 7455,
+      "sha256": "c278ada11cfb79d9b98753fa1a2d8efc1d09c2a0fe32ecc3b0800d0be2e3fc07",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-charcoal-512.png",
+      "bytes": 16474,
+      "sha256": "1a897983f5fb7669fcfc1eb216d394d0618296f71020f000b29eb9ca8dea7b28",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-charcoal-on-ivory-1024.png",
+      "bytes": 67711,
+      "sha256": "17055b078d51b9f8791d2c363f323289721611741ab762ee75c412df27264db6",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-charcoal-transparent-2048.png",
+      "bytes": 142073,
+      "sha256": "d25489021d529d54db57ed900a1e23934beec08a47253b621f027486ad21fd28",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-128.png",
+      "bytes": 5166,
+      "sha256": "536e3eae4a41928d0b8b904f9586fd01f02f633677de922c49f31ff6cf6bf8f2",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-256.png",
+      "bytes": 10197,
+      "sha256": "7ad469a12f855c291327d23425c8dfbcf2322fc2891250ee6d6bb98e2478fe52",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-512.png",
+      "bytes": 22124,
+      "sha256": "9b1d55c6973cac27f091ba0073672196f40460a9e033c52a466416fef79d126c",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-on-black-1024.png",
+      "bytes": 67859,
+      "sha256": "2c31da157608680cf5a345e0d395d32a92de8d7f0ea4dc420a98693db34260d6",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-on-charcoal-1024.png",
+      "bytes": 66099,
+      "sha256": "85c226b71b1009233987aee0d98c4b70a793d62b0a87c1af973972709543cc69",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-on-forest-1024.png",
+      "bytes": 64037,
+      "sha256": "53a728d28e6a90217fc3344ecb9b7701906c1a6528f793f6944d057b779e72f7",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-gold-transparent-2048.png",
+      "bytes": 140501,
+      "sha256": "abfd2407760493930edeb9a1f81ca40c773e66ba7383505a0ff9bc8a4f88aa07",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-ivory-on-charcoal-1024.png",
+      "bytes": 68049,
+      "sha256": "f2595f0a5c6e04416f38bdb43e3fb5681cf05497e130fba4b257425aefbbb7f3",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-ivory-transparent-2048.png",
+      "bytes": 140372,
+      "sha256": "ebe25f7b25c2288bbe03dee0990728dd2fcef650ef8a425bf8c8a0a685467710",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-stacked-gold-on-black-1024.png",
+      "bytes": 67875,
+      "sha256": "75fe4c4156d065fa00732e22ea6885fe0368664b907f8374636c835b07fe5f19",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-stacked-gold-transparent-2048.png",
+      "bytes": 140517,
+      "sha256": "c82bdc9bdbc0f936e559595cd6f282939e346d3f89b64f44281a4dd14677ca79",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-icon-white-transparent-2048.png",
+      "bytes": 140289,
+      "sha256": "2e7aad0d6a9d53c9f04dc218e70a0084adf33130b31b3ab68f8f8d17d0d4c4cc",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-profile-charcoal-on-ivory-1024.png",
+      "bytes": 67739,
+      "sha256": "ea9b07cfcfacf5592bc7effaf878986f62ad5f35b1b5357c01deedd67f04abc8",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-profile-gold-on-black-1024.png",
+      "bytes": 67887,
+      "sha256": "0eeaad4c2ae2ee8fbfbb7e7c28eb3aea2fa9f73b79b1a8b68b5af0a498adbfe5",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-profile-gold-on-charcoal-1024.png",
+      "bytes": 66127,
+      "sha256": "f5b81ca37d4a6b6a608f6ecad30440b41724fc33de09de8891466ea0cdb378ab",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-profile-gold-on-forest-1024.png",
+      "bytes": 64065,
+      "sha256": "5a87d321e99e63744ad05c2e230123e026db3be31f559dffcc6bd0d962c743d2",
+      "kind": "raster"
+    },
+    {
+      "path": "icon/png/mc-profile-ivory-on-charcoal-1024.png",
+      "bytes": 68077,
+      "sha256": "6adc11f493238517819e174671cf304e7c63ed4cf680dfe5fe8bc40832edf662",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/mc-logo-black.svg",
+      "bytes": 6787,
+      "sha256": "14565186b6a026afed1609c2bfe9f5261cff901fe39b9d56ffa3a8cbd757bd15",
+      "kind": "vector"
+    },
+    {
+      "path": "logo/mc-logo-charcoal.svg",
+      "bytes": 6790,
+      "sha256": "504e86c35a55730b8d153136d1a04c63c901e41e43b26c71a4b1402a16accbbd",
+      "kind": "vector"
+    },
+    {
+      "path": "logo/mc-logo-gold.svg",
+      "bytes": 6786,
+      "sha256": "cacf576384cc7e1d5e58103743a9352de9a5aa5bfcb377d394874836467af9ec",
+      "kind": "vector"
+    },
+    {
+      "path": "logo/mc-logo-ivory.svg",
+      "bytes": 6787,
+      "sha256": "9f1be16aa98802377ecee07d782273c0ce9cce9353b6f61d02ecba7cf8864563",
+      "kind": "vector"
+    },
+    {
+      "path": "logo/mc-logo-white.svg",
+      "bytes": 6787,
+      "sha256": "b38838af2dfaf57d83287f0df0dde5adf14b0f076c74d4687205265bddc9122e",
+      "kind": "vector"
+    },
+    {
+      "path": "logo/png/mc-logo-black-transparent-2048.png",
+      "bytes": 68997,
+      "sha256": "83c43e09d0f579fcaaa18410000b570761d74db02f8a265876ce98d75cd5a0e5",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-charcoal-on-cream-2048.png",
+      "bytes": 120353,
+      "sha256": "b9303c79844d3d2a40ddef8c37504eec24c176784b954dd6936df37f714762ab",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-charcoal-on-ivory-2048.png",
+      "bytes": 118886,
+      "sha256": "1f54b4eae3c981ddfc66bb26e4259d6fdb77780373623a7f92f7011257c1ceff",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-charcoal-transparent-2048.png",
+      "bytes": 86785,
+      "sha256": "c443f45719c652a8abdd29c92cfbee4f827f24a3173084063b0babd1c72dfb09",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-gold-on-black-2048.png",
+      "bytes": 108568,
+      "sha256": "63f547584de4a6b7af79e8b3d2479a161dcead9d4dab0d5f5c6745cd2d7b1dec",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-gold-on-charcoal-2048.png",
+      "bytes": 113697,
+      "sha256": "daf21637094e14f234d7ae1f8f4f494cbe5a45ea12f588956a373eda95343c21",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-gold-on-forest-2048.png",
+      "bytes": 109302,
+      "sha256": "a28d257070f689fc440ab094c771dd10fbabce890b081c349fb717d0ca4c84ce",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-gold-transparent-2048.png",
+      "bytes": 122934,
+      "sha256": "a14458bb50049c6496f540d7f3790e0573c18a05c12417d9226345cc7421c616",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-ivory-on-charcoal-2048.png",
+      "bytes": 118667,
+      "sha256": "2081af6f23a2cf96734dccb58eee2ec9da9e4c9335da2e9fcd3766e9761e5249",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-ivory-transparent-2048.png",
+      "bytes": 112784,
+      "sha256": "b8fbca2dde79e9baa1a144790810374e26684a57f97ed1762a94984291377ea8",
+      "kind": "raster"
+    },
+    {
+      "path": "logo/png/mc-logo-white-transparent-2048.png",
+      "bytes": 76058,
+      "sha256": "fd7016a03c70da6a91e95ebceff6f1c9b20d3eea8112f6dacd8b13791c4b7f1d",
+      "kind": "raster"
+    },
+    {
+      "path": "site.webmanifest",
+      "bytes": 344,
+      "sha256": "469bf1aa67e735909b741d143c84e4f789c758f71f6410f3cc48badef04cfc84",
+      "kind": "tokens"
+    },
+    {
+      "path": "tokens/mc-brand-tokens.css",
+      "bytes": 722,
+      "sha256": "242f7c67858e8e800cf02a2d0f325351ed45f463ce0f3bdb3bdc798e635cd0f1",
+      "kind": "tokens"
+    },
+    {
+      "path": "tokens/mc-brand-tokens.json",
+      "bytes": 760,
+      "sha256": "37dfa0fa726082f343bc593cd78de070aa696f35d06bb038fb161b5c975392cc",
+      "kind": "tokens"
+    },
+    {
+      "path": "tokens/mc-contrast-checks.csv",
+      "bytes": 580,
+      "sha256": "911a07094064e6a4784a546d62b1af32873608e51832d59d53eee3d2bc795e3a",
+      "kind": "tokens"
+    },
+    {
+      "path": "tokens/mc-ds-tokens.css",
+      "bytes": 2361,
+      "sha256": "d0a8008af413e8e83ccc5b51ecae21fcb6265740cd7702ddc7c35b06b9120261",
+      "kind": "tokens"
+    },
+    {
+      "path": "wordmark/mc-wordmark-character-black.svg",
+      "bytes": 5387,
+      "sha256": "6ae9938082b5b1a989473ea93918e2a449f76c468ae955cdc766219c98757252",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-character-charcoal.svg",
+      "bytes": 5390,
+      "sha256": "45fcfba964b89a545786302ecb358790f4d0614273c98bfa700b526acecc6188",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-character-gold.svg",
+      "bytes": 5386,
+      "sha256": "de33526a2842f85849302c118cd3dea8ac84b3bb48abd8e99e63eff601e5f0d7",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-character-ivory.svg",
+      "bytes": 5387,
+      "sha256": "451557f7577ef2107c2ce9b9b4b930eb65778ebfb64aea2ae2408db616722a2d",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-character-white.svg",
+      "bytes": 5387,
+      "sha256": "90ca2929a3470441bb6529c75e591e994fbd66bb0de4a1777f053efc1ef5c091",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-main-black.svg",
+      "bytes": 3303,
+      "sha256": "6a49fd5cf88d4c6f305cf4c404157edc999523ce440122afd0d016ae200ab4e0",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-main-charcoal.svg",
+      "bytes": 3306,
+      "sha256": "34f2a4e827e7e102fdcb9f2236c8af7b0803b394a3ffb4c35be149140d543574",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-main-gold.svg",
+      "bytes": 3302,
+      "sha256": "f89fad6fb05917811a923b23468534846a1a29faeb0c102911c5b506988c2195",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-main-ivory.svg",
+      "bytes": 3303,
+      "sha256": "83e8a18e1a26ac6105c7dec1db93bdcd1d146211c0eff2f08b72e27daf65190a",
+      "kind": "vector"
+    },
+    {
+      "path": "wordmark/mc-wordmark-main-white.svg",
+      "bytes": 3303,
+      "sha256": "4b0801f0f9fb3a6e76c43c7139222f3e16c93387f8c306ba3db26197318c7c9a",
+      "kind": "vector"
+    }
+  ]
+}

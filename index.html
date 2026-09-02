@@ -114,11 +114,11 @@
     <p class="lede">Every web-ready logo, icon, favicon, header, and token — <em>point every surface to a single source.</em> Pick an asset, copy its live URL, paste it into your HTML.</p>
     <div class="stats">
       <div class="stat"><div class="n" id="s-total">—</div><div class="l">assets</div></div>
-      <div class="stat"><div class="n">23</div><div class="l">vector lockups</div></div>
-      <div class="stat"><div class="n">3</div><div class="l">token files</div></div>
+      <div class="stat"><div class="n">15</div><div class="l">true-vector SVGs</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">token files</div></div>
       <div class="stat"><div class="n">2</div><div class="l">CDN routes</div></div>
     </div>
-    <p class="lede" style="font-size:16px;margin-top:22px">The 28-mark system lives in its own library — <a href="https://github.com/OWNER/mc-svg-studio">mc-svg-studio</a>.</p>
+    <p class="lede" style="font-size:16px;margin-top:22px">Read <a href="BRAND-GUIDELINES.md">BRAND-GUIDELINES.md</a> and <a href="LICENSE.md">LICENSE.md</a> before use. Every file is listed with its SHA-256 in <a href="manifest.json">manifest.json</a>; a file not in the manifest is not ours.</p>
   </div>
 </header>
 
@@ -141,7 +141,7 @@
   <div class="wrap">
     <p class="eyebrow">Provenance</p>
     <h3>One source of truth.</h3>
-    <p>Assets are derived from the master logo pack and the Design System Canon (v26.06.26). See <a href="SOURCE_MAP.md">SOURCE_MAP.md</a> and <a href="README.md">README.md</a>. Regenerate this web subset from the masters rather than editing here. The 28-mark system is maintained separately in the <a href="https://github.com/OWNER/mc-svg-studio">mc-svg-studio</a> repo.</p>
+    <p>Assets are derived from the master logo pack and the Design System Canon (v26.06.26). See <a href="SOURCE_MAP.md">SOURCE_MAP.md</a> and <a href="README.md">README.md</a>. Regenerate this web subset from the masters rather than editing here. Vector marks under <code>marks/</code> are published by workflow from the private mark-system repository. Official channels and how to report misuse: <a href="SECURITY.md">SECURITY.md</a>.</p>
   </div>
 </footer>
 
@@ -171,14 +171,14 @@ const ASSETS=[
     {p:"logo/png/mc-logo-gold-transparent-2048.png",bg:"check"},{p:"logo/png/mc-logo-charcoal-transparent-2048.png",bg:"check"},
     {p:"logo/png/mc-logo-ivory-transparent-2048.png",bg:"check"},{p:"logo/png/mc-logo-black-transparent-2048.png",bg:"check"},
     {p:"logo/png/mc-logo-white-transparent-2048.png",bg:"check"}]},
-  {title:"Wordmark components — SVG",sub:"The mAIn and CHARACTER halves for custom typographic lockups.",items:[
+  {title:"Wordmark components — SVG",sub:"The mAIn and CHARACTER halves. For the approved stacked lockup only (A-dot above, mAIn over CHARACTER). Gold sits on mAIn, never on CHARACTER.",items:[
     {p:"wordmark/mc-wordmark-main-gold.svg",bg:"dark"},{p:"wordmark/mc-wordmark-main-charcoal.svg",bg:"light"},
     {p:"wordmark/mc-wordmark-main-ivory.svg",bg:"dark"},{p:"wordmark/mc-wordmark-main-black.svg",bg:"light"},
     {p:"wordmark/mc-wordmark-main-white.svg",bg:"dark"},
     {p:"wordmark/mc-wordmark-character-gold.svg",bg:"dark"},{p:"wordmark/mc-wordmark-character-charcoal.svg",bg:"light"},
     {p:"wordmark/mc-wordmark-character-ivory.svg",bg:"dark"},{p:"wordmark/mc-wordmark-character-black.svg",bg:"light"},
     {p:"wordmark/mc-wordmark-character-white.svg",bg:"dark"}]},
-  {title:"Icon — A-dot & stacked (SVG)",sub:"Square symbol for app icons and large-size favicons.",items:[
+  {title:"Icon — A-dot & stacked (SVG, deprecated)",sub:"These eight files wrap a raster PNG inside an SVG container and do not scale. Kept for URL stability; use icon/png at the size you need, or marks/mc-a-dot.svg once published.",items:[
     {p:"icon/mc-icon-gold.svg",bg:"dark"},{p:"icon/mc-icon-ivory.svg",bg:"dark"},{p:"icon/mc-icon-white.svg",bg:"dark"},
     {p:"icon/mc-icon-charcoal.svg",bg:"light"},{p:"icon/mc-icon-black.svg",bg:"light"},
     {p:"icon/mc-icon-stacked-gold.svg",bg:"dark"},{p:"icon/mc-icon-stacked-ivory.svg",bg:"dark"},{p:"icon/mc-icon-stacked-white.svg",bg:"dark"}]},

@@ -5,3 +5,5 @@ desktop.ini
 *.tmp
 *.bak
 ._*
+node_modules/
+dist/
