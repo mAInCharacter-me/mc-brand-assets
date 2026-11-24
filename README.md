@@ -103,12 +103,43 @@ https://cdn.jsdelivr.net/gh/mAInCharacter-me/mc-brand-assets@v1.0.0/<path>
 |---|---|---|
 | `logo/` | 5 horizontal-lockup SVGs and 11 PNGs at 2048 px wide, on-background and transparent | Site headers, hero, email, documents |
 | `wordmark/` | `mAIn` and `CHARACTER` component SVGs, 5 colorways each | The approved stacked lockup only. See the guidelines. |
-| `icon/` | A-dot and stacked icons: square PNGs at 1024, transparent at 2048, small 128 / 256 / 512, circle-safe profiles | App icons, avatars, large favicons |
+| `icon/` | A-dot and stacked icons: square PNGs at 1024, transparent at 2048, small 128 / 256 / 512, standard and compact circle-safe profiles | App icons, avatars, large favicons |
 | `favicon/` | favicon 16 / 32 / 48 / 64, apple-touch 180, web-app 192 / 512, OG image 1200 by 630 | `<head>` tags, social cards |
 | `header/` | Header exports at 360 / 720 / 1200 px wide, dark, light and overlay | `srcset` responsive navigation |
 | `tokens/` | `mc-ds-tokens.css` (web canon, use this), logo-pack tokens `.css` and `.json`, contrast checks `.csv` | Color variables, design linking |
 | `marks/` | Vector marks published by workflow from the private mark-system repository, with their own `manifest.json` | Appears after the A-dot vector is signed off |
 | `manifest.json` | SHA-256 of every file above | Verifying authenticity |
+
+## Compact profile images
+
+Use the **820 px compact profile** in square and circular slots where the
+full stacked mAInCharacter mark looks too small, such as merchant avatars,
+account profiles, and community images. The compact framing removes the
+outer background. It retains the original artwork and colors, with clearance
+for a centered circular mask. Use the regular **1,024 px profile** when you
+want more space around the mark, and the horizontal wordmark for wide storefront
+headers and invoices.
+
+| Colorway | Compact profile | Standard profile |
+|---|---|---|
+| Gold on black | [820 px](icon/png/mc-profile-gold-on-black-compact-820.png) | [1,024 px](icon/png/mc-profile-gold-on-black-1024.png) |
+| Gold on charcoal | [820 px](icon/png/mc-profile-gold-on-charcoal-compact-820.png) | [1,024 px](icon/png/mc-profile-gold-on-charcoal-1024.png) |
+| Charcoal on ivory | [820 px](icon/png/mc-profile-charcoal-on-ivory-compact-820.png) | [1,024 px](icon/png/mc-profile-charcoal-on-ivory-1024.png) |
+| Ivory on charcoal | [820 px](icon/png/mc-profile-ivory-on-charcoal-compact-820.png) | [1,024 px](icon/png/mc-profile-ivory-on-charcoal-1024.png) |
+| Gold on forest | [820 px](icon/png/mc-profile-gold-on-forest-compact-820.png) | [1,024 px](icon/png/mc-profile-gold-on-forest-1024.png) |
+
+Gold on black is the default for merchant profiles. Keep forest for surfaces
+whose palette calls for it. Use the established ink, gold, and paper palette
+for invoicing. In any provider with a crop or zoom control, center the image
+and check that the full wordmark remains visible in the circular preview.
+
+To regenerate the compact files from the originals, use FFmpeg and Node.js:
+
+```bash
+node scripts/build-compact-profiles.mjs
+node scripts/stamp-metadata.mjs
+node scripts/build-manifest.mjs
+```
 
 ### Deprecated, kept for URL stability
 

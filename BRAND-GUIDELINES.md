@@ -60,7 +60,7 @@ Character. Use it as a name, never as a verb or a plural.
 | Website header on a light surface | `logo/mc-logo-charcoal.svg` |
 | Email signature or a document | `logo/png/mc-logo-gold-on-black-2048.png` or `logo/png/mc-logo-charcoal-on-ivory-2048.png` |
 | Favicon and app icons | `favicon/` files and `site.webmanifest` |
-| Square avatar or profile image | `icon/png/mc-profile-*-1024.png` (circle-safe) |
+| Square avatar or profile image | `icon/png/mc-profile-*-1024.png` for regular framing or `icon/png/mc-profile-*-compact-820.png` for small placements. Both fit a centered circular mask. |
 | Social preview card | `favicon/og-image-1200x630.png` |
 | A vector A-dot | `marks/mc-a-dot.svg` once published. Until then, use `icon/png/` at the size you need; the `icon/*.svg` files wrap a raster image and do not scale. |
 
